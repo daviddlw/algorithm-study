@@ -75,7 +75,7 @@ public class Interview06to10Case {
 			System.out.println(Arrays.toString(mat[i]));
 		}
 	}
-	
+
 	public static ListNode findKthToTail(ListNode head, int k) {
 		if (head.next == null || k < 0) {
 			return null;
@@ -105,5 +105,30 @@ public class Interview06to10Case {
 
 		return last;
 	}
+
+	public boolean removeNode(ListNode pNode) {
+		if (pNode.next == null) {
+			//尾节点不用删除返回false
+			return false;
+		} else {
+			pNode.val = pNode.next.val;
+			pNode.next = pNode.next.next;
+			return true;
+		}
+	}
 	
+	public static int ack(int m, int n) {
+		if (m == 0) {
+			return n + 1;
+		} else if (n == 0) {
+			return ack(m - 1, 1);
+		} else {
+			return ack(m - 1, ack(m, n - 1));
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(ack(3, 3));
+	}
+
 }

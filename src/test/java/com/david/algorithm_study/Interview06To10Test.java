@@ -1,11 +1,13 @@
 package com.david.algorithm_study;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.david.interview.ArraySolution;
 import com.david.interview.Interview06to10Case;
 import com.david.interview.ListNode;
 
@@ -79,4 +81,24 @@ public class Interview06To10Test {
 			return list;
 		}
 	}
+
+	/**
+	 * 双栈实现队列
+	 */
+	@Test
+	public void testArraySolution() {
+		ArraySolution solution = new ArraySolution();
+		solution.push(1);
+		solution.push(2);
+		solution.push(3);
+		System.out.println(solution.pop());
+		System.out.println(solution.pop());
+		solution.push(4);
+		System.out.println(solution.pop());
+		solution.push(5);
+		System.out.println(solution.pop());
+		System.out.println(solution.pop());
+	}
+
+
 }
