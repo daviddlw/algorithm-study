@@ -27,6 +27,12 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>com.couchbase.client</groupId>
+			<artifactId>java-client</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>
@@ -69,7 +75,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -88,7 +94,7 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>${commons-dbcp.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
@@ -102,7 +108,7 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>${org.mybatis-spring-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
@@ -208,7 +214,7 @@
 			<artifactId>jedis</artifactId>
 			<version>${jedis.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>net.sf.flexjson</groupId>
 			<artifactId>flexjson</artifactId>
@@ -226,7 +232,7 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${org.aspectj.version}</version>
 		</dependency>
-		
+
 		<!-- Test dependencies Start -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -235,7 +241,7 @@
 			<scope>test</scope>
 		</dependency>
 		<!-- Test dependencies End -->
-		
+
 		<dependency>
 			<groupId>commons-net</groupId>
 			<artifactId>commons-net</artifactId>
