@@ -11,7 +11,6 @@ import java.util.Stack;
 public class ArraySolution {
 	Stack<Integer> stack1 = new Stack<Integer>();
 	Stack<Integer> stack2 = new Stack<Integer>();
-	
 	public void push(int node) {
 		while (!stack2.isEmpty()) {
 			stack1.push(stack2.pop());
