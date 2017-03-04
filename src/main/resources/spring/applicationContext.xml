@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:component-scan base-package="com.david">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- 上传接口 -->
+	<!-- 切记id一定要叫multipartResolver，否则会抛出Required CommonsMultipartFile parameter 
+		'file' is not present异常，或者是如下异常 org.apache.catalina.connector.RequestFacade 
+		cannot be cast to org.springframework.web.multipart.MultipartHttpServletRequest -->
+	<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+		<property name="maxUploadSize" value="1048576000" /> <property name="maxInMemorySize" 
+		value="4096" /> <property name="defaultEncoding" value="UTF-8" /> </bean> -->
+
+	<!-- <context:property-placeholder location="classpath:dbconfig.properties" 
+		/> -->
+	<!-- 配置c3p0 bean配置 -->
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" 
+		destroy-method="close"> <property name="driverClass" value="${db.driver}"></property> 
+		<property name="jdbcUrl" value="${db.url}"></property> <property name="user" 
+		value="${db.username}"></property> <property name="password" value="${db.password}"></property> 
+		<property name="initialPoolSize" value="${db.initPoolSize}"></property> <property 
+		name="minPoolSize" value="${db.minPoolSize}"></property> <property name="maxPoolSize" 
+		value="${db.maxPoolSize}"></property> <property name="maxIdleTime" value="${db.maxIdleTime}"></property> 
+		<property name="acquireIncrement" value="${db.acquireIncrement}"></property> 
+		<property name="acquireRetryAttempts" value="${db.acquireRetryAttempts}"></property> 
+		<property name="preferredTestQuery" value="${db.preferredTestQuery}"></property> 
+		<property name="testConnectionOnCheckin" value="${db.testConnectionOnCheckin}"></property> 
+		<property name="testConnectionOnCheckout" value="${db.testConnectionOnCheckout}"></property> 
+		<property name="idleConnectionTestPeriod" value="${db.idleConnectionTestPeriod}"></property> 
+		<property name="breakAfterAcquireFailure" value="${db.breakAfterAcquireFailure}"></property> 
+		<property name="maxStatements" value="${db.maxStatements}"></property> </bean> -->
+
+	<!-- <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="dataSource" ref="dataSource" /> <property name="configLocation" 
+		value="classpath:mybatis-config.xml" /> <property name="typeAliasesPackage" 
+		value="com.david.dto" /> </bean> -->
+
+	<!-- 注入mapper接口 -->
+	<!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> <property 
+		name="basePackage" value="com.david.dao" /> </bean> -->
+
+
+</beans>

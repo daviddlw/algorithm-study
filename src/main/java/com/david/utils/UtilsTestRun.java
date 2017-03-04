@@ -11,10 +11,6 @@ public class UtilsTestRun {
 		System.out.println(result);
 	}
 	
-	private static void httpPostQuery() {
-		
-	}
-	
 	private static void httpPostForm() {
 		
 	}
