@@ -292,6 +292,10 @@ public class HttpUtils {
 	public static String httpPostForm(String url, Map<String, String> formParam) throws UnsupportedEncodingException {
 		return httpPost(url, null, formParam);
 	}
+	
+	public static String httpPost(String url, String requestBody) throws UnsupportedEncodingException {
+		return httpPost(url, null, null, DEFAULT_TIME_OUT, DEFAULT_ENCODING, requestBody);
+	}
 
 	/**
 	 * httppost请求

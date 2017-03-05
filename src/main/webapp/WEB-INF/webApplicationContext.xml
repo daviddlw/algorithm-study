@@ -16,7 +16,6 @@
 
 	<!-- HttpMessageConverter接口，需要开启<mvc:annotation-driven /> -->
 
-
 	<!-- 针对页面处理 -->
 	<bean id="contentNegotiationManagerBean"
 		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
