@@ -9,7 +9,7 @@ import org.junit.Test;
 
 import com.david.interview.ArraySolution;
 import com.david.interview.Interview06to10Case;
-import com.david.interview.ListNode;
+import com.david.leetcode.ListNode;
 
 /**
  * 程序员面试经典题库06-10
