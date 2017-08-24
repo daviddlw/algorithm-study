@@ -45,5 +45,15 @@ public class StatementTest {
 		System.out.println(1 & 1);
 		System.out.println(2 & 4);
 	}
+	
+	@Test
+	public void testV2() {
+		Person person = new Person();
+		Department department = new Department();
+		department.setChargeCode("daviddai");
+		department.setManager(person);
+		person.setDepartment(department);
+		System.out.println(person.getDepartment().getManager());
+	}
 
 }
